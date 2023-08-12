@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    
+
+</head>
+<body>
+
+    <div class="container py-5">
+        <label for="productName"> productName : </label>
+        <input value="" type="text" class="form-control mb-3" id="productName">
+
+        <label for="producPrice"> producPrice : </label>
+        <input value="" type="number" class="form-control mb-3" id="producPrice">
+
+        <label for="productCategory"> productCategory : </label>
+        <input value="" type="text" class="form-control mb-3" id="productCategory">
+
+        <label for="productDesc"> productDesc : </label>
+        <input value="" type="text" class="form-control mb-3" id="productDesc">
+
+        <button id="addBtn" onclick="addProduct()" type="submit" class="btn d-block btn-info w-100">Add Product</button>
+        <button id="updateBtn" onclick="setFormForUpdate()" type="submit" class="btn d-block mt-2 d-none btn-warning w-100">Update Product</button>
+
+    </div>
+
+    <div class="mx-auto w-75">
+        <input type="text" oninput="searchProduct(this.value)" placeholder="search by name .." class="form-control my-3 m-auto w-75"><br>
+        <table class="table text-center">
+            <thead>
+                <th> Name </th>
+                <th> Price </th>
+                <th> Category </th>
+                <th> Desc </th>
+                <th> Update </th>
+                <th> Delete </th>
+            </thead>
+
+            <tbody id="tableBody">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    
+</body>
+</html>
